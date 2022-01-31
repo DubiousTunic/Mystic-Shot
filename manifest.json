@@ -1,0 +1,30 @@
+{
+  "name": "Mystic Shot",
+  "description": "Browser Screenshots in Chrome",
+  "version": "1.7",
+  "manifest_version": 3,
+  "background" : 
+  	{ 
+  		"service_worker" : "mysticdungeon.js"
+  	}
+  ,
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["girlfriend.js"]
+   }
+ ],
+  "action" : {
+	  	"default_icon": {
+	    	"48": "/images/al0qb-b2wgu-001.png"
+	  	}
+	},
+	"commands": {
+	    "shot" : {
+	        "suggested_key": {
+	             "default": "Ctrl+Period" 
+	        },
+	        "description": "Take a screenshot"
+	    }
+	}
+}
